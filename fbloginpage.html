@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Facebook - Log In or Sign Up</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/x-icon" href="https://1000logos.net/wp-content/uploads/2021/04/Facebook-logo.png"
+</head>
+<body>
+	<div class="container">
+		<div class="logo">
+			<img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="Facebook logo">
+		</div>
+		<h2 class="heading">Log in to Facebook</h2>
+		<form>
+			<label for="mobile">Mobile number or email:</label>
+			<input type="text" id="mobile" name="mobile" placeholder="Mobile number or email"><br><br>
+			<button type="button" onclick="sendOTP()">Send OTP</button><br><br>
+			<label for="otp">Enter OTP:</label>
+			<input type="text" id="otp" name="otp" placeholder="Enter OTP"><br><br>
+			<button type="button" onclick="verifyOTP()">Log in</button>
+			<p class="forgot-password">Forgot password?</p>
+			<hr>
+			<p class="sign-up">Don't have an account? <a href="#">Sign up</a></p>
+		</form>
+	</div>
+	<div id="success-page" class="container" style="display: none;">
+		<h2 class="heading">Log in Successful</h2>
+		<p>You have successfully logged in to your Facebook account.</p>
+	</div>
+	<script>
+		function sendOTP() {
+			// Write your code here to send OTP to the user's mobile number
+			alert("OTP sent successfully!");
+		}
+
+		function verifyOTP() {
+			// Write your code here to verify OTP entered by the user
+			// If OTP is verified successfully, show the success message
+			document.getElementById("success-page").style.display = "block";
+			document.getElementsByClassName("container")[0].style.display = "none";
+		}
+	</script>
+</body>
+</html>
